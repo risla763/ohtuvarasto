@@ -48,6 +48,7 @@ class TestVarasto(unittest.TestCase):
         varasto = Varasto(10)
         self.assertEqual(varasto.ota_varastosta(varasto.saldo+2), varasto.saldo)
         self.assertAlmostEqual(varasto.saldo, 0.0)
+        print("muutos")
 
     def test_string_varasto(self):
         varasto = Varasto(10)

@@ -30,5 +30,7 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Coverage report
         run: poetry run coverage xml
+      - name: Pylint checks
+        run: poetry run pylint src
       - name: Coverage report to Codecov
         run: bash <(curl -s https://codecov.io/bash)
